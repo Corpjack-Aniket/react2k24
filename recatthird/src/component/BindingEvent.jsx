@@ -19,8 +19,8 @@ export default class BindingEvent extends Component {
       <div>
         <h1>{this.state.name}</h1>
         //! 2nd way of binding method
-        
-        <button onClick={this.Handlevent}>Click Me</button>
+        <button onClick={this.Handlevent.bind(this)}>Click Me</button>
+        {/* <button onClick={this.Handlevent}>Click Me</button> */}
       </div>
     )
   }
