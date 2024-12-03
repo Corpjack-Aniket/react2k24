@@ -9,17 +9,27 @@ export default class BindingEvent extends Component {
         name:"Adil"
       }
    }
-   Handlevent(){
+  //  Handlevent(){
+  //   this.setState({
+  //       name:"Kumar"
+  //   })
+  //  }
+
+   //! 3rd way of binding method using arrow function
+   Handlevent=()=>{
     this.setState({
         name:"Kumar"
     })
-   }
+   } 
+
+
   render() {
     return (
       <div>
         <h1>{this.state.name}</h1>
-        //! 2nd way of binding method
-        <button onClick={this.Handlevent.bind(this)}>Click Me</button>
+        {/* //! 2nd way of binding method */}
+         <button onClick={()=>this.Handlevent()}>Click Me</button>
+        {/* <button onClick={this.Handlevent.bind(this)}>Click Me</button> */}
         {/* <button onClick={this.Handlevent}>Click Me</button> */}
       </div>
     )
